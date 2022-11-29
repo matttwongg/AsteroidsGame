@@ -22,7 +22,7 @@ public void keyPressed(){
     Aaron.myYspeed=0;
     Aaron.myCenterX=(int)(Math.random()*500);
     Aaron.myCenterY=(int)(Math.random()*500);
-    Aaron.myPointDirection=(int)(Math.random()*2*PI);
+    Aaron.myPointDirection=(int)(Math.random()*500);
   }
   if(key=='w'){
     Aaron.accelerate(.1);
