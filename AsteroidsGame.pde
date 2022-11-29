@@ -37,6 +37,7 @@ public void keyPressed(){
     Aaron.turn(3.);
   }
   if(key=='1'){
-    Aaron.accelerate(10.);
+    Aaron.myXspeed=0;
+    Aaron.myYspeed=0;
   }
 }
