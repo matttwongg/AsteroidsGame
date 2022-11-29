@@ -17,12 +17,12 @@ public void draw()
   Aaron.show();
 }
 public void keyPressed(){
-  if(key=='r'){
+  if(key=='h'){
     Aaron.myXspeed=0;
     Aaron.myYspeed=0;
     Aaron.myCenterX=(int)(Math.random()*500);
     Aaron.myCenterY=(int)(Math.random()*500);
-    Aaron.myPointDirection=0;
+    Aaron.myPointDirection=(int)(Math.random()*2*PI);
   }
   if(key=='w'){
     Aaron.accelerate(.1);
@@ -36,8 +36,5 @@ public void keyPressed(){
   if(key=='d'){
     Aaron.turn(3.);
   }
-  if(key=='1'){
-    Aaron.myXspeed=0;
-    Aaron.myYspeed=0;
-  }
+
 }
