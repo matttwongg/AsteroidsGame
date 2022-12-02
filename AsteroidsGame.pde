@@ -18,11 +18,11 @@ public void draw()
 }
 public void keyPressed(){
   if(key=='h'){
-    Aaron.setXspeed=0;
-    Aaron.setYspeed=0;
-    Aaron.setCenterX=(int)(Math.random()*500);
-    Aaron.setCenterY=(int)(Math.random()*500);
-    Aaron.setPointDirection=(int)(Math.random()*500);
+    Aaron.setXspeed(0);
+    Aaron.setYspeed(0);
+    Aaron.setCenterX((int)(Math.random()*500));
+    Aaron.setCenterY((int)(Math.random()*500));
+    Aaron.setPointDirection((int)(Math.random()*500));
   }
   if(key=='w'){
     Aaron.accelerate(.1);
