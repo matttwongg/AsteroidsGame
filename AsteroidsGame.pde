@@ -20,7 +20,7 @@ public void draw()
   for(int i=0;i<Andre.size();i++){
     Andre.get(i).move();
     Andre.get(i).show();
-    if(dist((float)Andre.get(i).getCenterX(),(float)Andre.get(i).getCenterY(),(float)Aaron.getCenterX(),(float)Aaron.getCenterY())<50){
+    if(dist((float)Andre.get(i).getCenterX(),(float)Andre.get(i).getCenterY(),(float)Aaron.getCenterX(),(float)Aaron.getCenterY())<10){
       Andre.remove(i);
     }
   }
