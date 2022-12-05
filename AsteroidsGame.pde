@@ -1,10 +1,14 @@
 Spaceship Aaron=new Spaceship();
 Star[] MaLau=new Star[200];
+ArrayList <Asteroid> Andre=new ArrayList <Asteroid>();
 public void setup() 
 {
   size(500,500);
   for(int i=0;i<200;i++){
     MaLau[i]=new Star();
+  }
+  for(int i=0;i<200;i++){
+    Andre.add(new Asteroid());
   }
 }
 public void draw() 
@@ -12,6 +16,13 @@ public void draw()
   background(0);
   for(int i=0;i<200;i++){
     MaLau[i].show();
+  }
+  for(int i=0;i<Andre.size();i++){
+    Andre.get(i).move();
+    Andre.get(i).show();
+    if(dist((float)Andre.get(i).getCenterX(),(float)Andre.get(i).getCenterY(),(float)Aaron.getCenterX(),(float)Aaron.getCenterY())<50){
+      Andre.remove(i);
+    }
   }
   Aaron.move();
   Aaron.show();
