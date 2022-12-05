@@ -24,4 +24,10 @@ public void setCenterY(int v){
 public void setPointDirection(int c){
   myPointDirection=c;
 }
+public double getCenterX(){
+  return myCenterX;
+}
+public double getCenterY(){
+  return myCenterY;
+}
 }
