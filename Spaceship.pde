@@ -30,4 +30,13 @@ public double getCenterX(){
 public double getCenterY(){
   return myCenterY;
 }
+public double getPointDirection(){
+  return myPointDirection;
+}
+public double getXspeed(){
+  return myXspeed;
+}
+public double getYspeed(){
+  return myYspeed;
+}
 }
