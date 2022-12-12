@@ -1,6 +1,7 @@
 Spaceship Aaron=new Spaceship();
 Star[] MaLau=new Star[200];
 ArrayList <Asteroid> Andre=new ArrayList <Asteroid>();
+ArrayList <Bullet> MrChan = new ArrayList <Bullet> ();
 public void setup() 
 {
   size(500,500);
@@ -23,6 +24,20 @@ public void draw()
     if(dist((float)Andre.get(i).getCenterX(),(float)Andre.get(i).getCenterY(),(float)Aaron.getCenterX(),(float)Aaron.getCenterY())<25){
       Andre.remove(i);
     }
+  }
+    for (int i = 0; i < MrChan.size(); i++) {
+    for (int j = 0; j < Andre.size(); j++) {
+      if (dist((float)(Andre.get(j).getCenterX()),(float)(Andre.get(j).getCenterY()),(float)(MrChan.get(i).getCenterX()),(float)(MrChan.get(i).getCenterY())) < 10){
+        MrChan.remove(i);
+        Andre.remove(j);
+        Andre.add(new Asteroid());
+        break;
+      }
+    }
+  }
+  for (int i = 0; i < MrChan.size(); i++) {
+    MrChan.get(i).move();
+    MrChan.get(i).show();
   }
   Aaron.move();
   Aaron.show();
@@ -47,5 +62,7 @@ public void keyPressed(){
   if(key=='d'){
     Aaron.turn(3.);
   }
-
+}
+public void mousePressed() {
+  MrChan.add(new Bullet(Aaron));
 }
